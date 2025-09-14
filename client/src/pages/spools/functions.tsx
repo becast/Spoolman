@@ -17,6 +17,7 @@ export async function setSpoolArchived(spool: ISpool, archived: boolean) {
     },
     body: JSON.stringify({
       archived: archived,
+      location: null,
     }),
   };
   const request = new Request(getAPIURL() + "/spool/" + spool.id);
